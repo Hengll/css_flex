@@ -6,14 +6,103 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>chinese_chess</title>
   <style>
-    #land {
-      border: 1px solid black;
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
     }
 
     .checkerboard {
-      width: 500px;
-      height: 550px;
+      width: 600px;
+      height: 650px;
       border: 1px solid black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .black,
+    .red {
+      width: 480px;
+      height: 240px;
+      border: 1px solid black;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .black::before {
+      content: '';
+      width: calc(117px * 1.414213);
+      border: 1px solid black;
+      position: absolute;
+      top: -0.5px;
+      left: 179.75px;
+      transform: rotate(45deg);
+      transform-origin: 0;
+    }
+
+    .black::after {
+      content: '';
+      width: calc(117px * 1.414213);
+      border: 1px solid black;
+      position: absolute;
+      top: 118px;
+      left: 179.75px;
+      transform: rotate(-45deg);
+      transform-origin: 0;
+    }
+
+    .red::before {
+      content: '';
+      width: calc(117px * 1.414213);
+      border: 1px solid black;
+      position: absolute;
+      top: 117.5px;
+      left: 179.75px;
+      transform: rotate(45deg);
+      transform-origin: 0;
+    }
+
+    .red::after {
+      content: '';
+      width: calc(117px * 1.414213);
+      border: 1px solid black;
+      position: absolute;
+      top: 236px;
+      left: 179.75px;
+      transform: rotate(-45deg);
+      transform-origin: 0;
+    }
+
+    .river {
+      width: 480px;
+      height: 60px;
+      border-left: 2px solid black;
+      border-right: 2px solid black;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .chuhe,
+    .hanjie {
+      font-size: 2.6rem;
+      font-family: '標楷體';
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .row {
+      display: flex;
+      flex-grow: 1;
+    }
+
+    .col {
+      border: 1px solid black;
+      flex-grow: 1;
     }
 
     .slogan {
@@ -63,7 +152,7 @@
       <div class="empty_row"></div>
     </div>
     <!-- 紅軍 -->
-    <div id="red_army">
+    <!-- <div id="red_army">
       <div class="empty_row"></div>
       <div class="third_row">
         <div class="chess">兵</div>
@@ -99,7 +188,7 @@
         <div class="chess">傌</div>
         <div class="chess">俥</div>
       </div>
-    </div>
+    </div> -->
     <!-- 棋盤 -->
     <div class="checkerboard">
       <div class="black">
@@ -194,10 +283,10 @@
       </div>
     </div>
   </div>
-  <div class="slogan">
+  <!-- <div class="slogan">
     <p>棋盤裡，車無輪，馬無韁，叫聲將軍提防提防</p>
     <p>圖畫裡，龍不吟，虎不嘯，小小書僮可笑可笑</p>
-  </div>
+  </div> -->
 </body>
 
 </html>
