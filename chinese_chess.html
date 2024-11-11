@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 
 <head>
   <meta charset="UTF-8">
@@ -8,14 +8,35 @@
   <style>
     * {
       box-sizing: border-box;
-      padding: 0;
-      margin: 0;
     }
 
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #land {
+      position: relative;
+    }
+
+
+    .slogan {
+      font-size: 2.2rem;
+      font-family: '標楷體';
+      writing-mode: vertical-rl
+    }
+
+    .slogan:nth-of-type(2) {
+      order: -1;
+    }
+
+    /* ------------------------- */
+    /* 棋盤 */
     .checkerboard {
       width: 600px;
       height: 650px;
-      border: 1px solid black;
+      border: 2px solid black;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -34,44 +55,44 @@
 
     .black::before {
       content: '';
-      width: calc(117px * 1.414213);
+      width: calc(117.5px * 1.414213);
       border: 1px solid black;
       position: absolute;
       top: -0.5px;
-      left: 179.75px;
+      left: 180px;
       transform: rotate(45deg);
       transform-origin: 0;
     }
 
     .black::after {
       content: '';
-      width: calc(117px * 1.414213);
+      width: calc(117.5px * 1.414213);
       border: 1px solid black;
       position: absolute;
-      top: 118px;
-      left: 179.75px;
+      top: 117.5px;
+      left: 180px;
       transform: rotate(-45deg);
       transform-origin: 0;
     }
 
     .red::before {
       content: '';
-      width: calc(117px * 1.414213);
+      width: calc(117.5px * 1.414213);
       border: 1px solid black;
       position: absolute;
-      top: 117.5px;
-      left: 179.75px;
+      bottom: 117.5px;
+      left: 180px;
       transform: rotate(45deg);
       transform-origin: 0;
     }
 
     .red::after {
       content: '';
-      width: calc(117px * 1.414213);
+      width: calc(117.5px * 1.414213);
       border: 1px solid black;
       position: absolute;
-      top: 236px;
-      left: 179.75px;
+      bottom: -0.5px;
+      left: 180px;
       transform: rotate(-45deg);
       transform-origin: 0;
     }
@@ -89,7 +110,6 @@
     .hanjie {
       font-size: 2.6rem;
       font-family: '標楷體';
-      flex-grow: 1;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -105,8 +125,57 @@
       flex-grow: 1;
     }
 
-    .slogan {
-      writing-mode: vertical-rl
+    /* ------------------------------------ */
+    /* 棋子 */
+
+    #black_army {
+      width: 538px;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 27px;
+      left: 31px;
+      z-index: 1;
+    }
+
+    #red_army {
+      width: 538px;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 326px;
+      left: 31px;
+      z-index: 1;
+      color: red;
+    }
+
+    .main_row,
+    .second_row,
+    .third_row,
+    .empty_row {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex: 1 1 0%;
+    }
+
+    .chess,
+    .empty_chess {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-basis: 45px;
+    }
+
+    .chess {
+      height: 45px;
+      font-size: 2rem;
+      font-family: '標楷體';
+      border: 2px solid black;
+      border-radius: 50%;
+      background: white;
     }
   </style>
 </head>
@@ -152,7 +221,7 @@
       <div class="empty_row"></div>
     </div>
     <!-- 紅軍 -->
-    <!-- <div id="red_army">
+    <div id="red_army">
       <div class="empty_row"></div>
       <div class="third_row">
         <div class="chess">兵</div>
@@ -188,7 +257,7 @@
         <div class="chess">傌</div>
         <div class="chess">俥</div>
       </div>
-    </div> -->
+    </div>
     <!-- 棋盤 -->
     <div class="checkerboard">
       <div class="black">
@@ -283,10 +352,12 @@
       </div>
     </div>
   </div>
-  <!-- <div class="slogan">
+  <div class="slogan">
     <p>棋盤裡，車無輪，馬無韁，叫聲將軍提防提防</p>
+  </div>
+  <div class="slogan">
     <p>圖畫裡，龍不吟，虎不嘯，小小書僮可笑可笑</p>
-  </div> -->
+  </div>
 </body>
 
 </html>
