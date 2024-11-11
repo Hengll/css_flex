@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox_layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        #top {
+            height: 50px;
+            background: black;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #start {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        #others {
+            width: 250px;
+            color: white;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #content {
+            height: calc(100vh - 150px);
+        }
+
+        #footer {
+            height: 100px;
+            background: black;
+            color: white;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="top">
+        <div id="start">Start Bootstrap</div>
+        <div id="others">
+            <div id="home">home</div>
+            <div id="about">about</div>
+            <div id="contact">contact</div>
+            <div id="services">services</div>
+        </div>
+    </div>
+    <div id="content">
+        <div id="row1">
+            <div id="photo"></div>
+            <div id="Business"></div>
+        </div>
+        <div id="row2"></div>
+        <div id="row3">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+        </div>
+    </div>
+    <div id="footer">Copyright © Your Website 2023</div>
+</body>
+
+</html>
