@@ -21,20 +21,111 @@
         }
 
         #start {
+            width: 200px;
             color: white;
             font-size: 1.5rem;
         }
 
         #others {
             width: 250px;
-            color: white;
+            color: #aaa;
             font-size: 1.2rem;
             display: flex;
             justify-content: space-between;
         }
 
+        #home {
+            color: white;
+        }
+
         #content {
             height: calc(100vh - 150px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        #row1 {
+            width: 1200px;
+            height: 300px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #photo {
+            width: 675px;
+            background: url(https://dummyimage.com/900x400/dee2e6/6c757d.jpg) no-repeat center/cover;
+            border-radius: 5px;
+        }
+
+        #business {
+            width: 480px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #b-text {
+            font-size: 1.2rem;
+        }
+
+        #b-text p {
+            font-size: 2.8rem;
+        }
+
+        #b-more {
+            padding-top: 1rem;
+        }
+
+        #row2 {
+            width: 1200px;
+            height: 100px;
+            background: #666;
+            border-radius: 5px;
+            color: white;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #row3 {
+            width: 1200px;
+            height: 250px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card {
+            width: 350px;
+            border: 1px solid #999;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .text {
+            flex: 4 1 0%;
+            padding: 1rem;
+            font-size: 1rem;
+        }
+
+        .text p {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .more {
+            flex: 1 1 0%;
+            border-top: 1px solid #999;
+            display: flex;
+            align-items: center;
+
+            button {
+                margin-left: 1rem;
+                font-size: 1rem;
+            }
         }
 
         #footer {
@@ -45,6 +136,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+
+        button {
+            padding: 6px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            color: white;
+            background: blue;
         }
     </style>
 </head>
@@ -62,13 +161,55 @@
     <div id="content">
         <div id="row1">
             <div id="photo"></div>
-            <div id="Business"></div>
+            <div id="business">
+                <div id="b-text">
+                    <p>Business Name or Tagline</p>
+                    This is template that is great for small businesses.It doesn’t
+                    have too much fancy flare to it,but it makes a great use of the
+                    standard Bootstrap core components.Feel free to use this
+                    template for any project you want!
+                </div>
+                <div id="b-more">
+                    <button>Call to Action!</button>
+                </div>
+            </div>
         </div>
-        <div id="row2"></div>
+        <div id="row2">This call to action card is a great place to showcase some important information or display a
+            clever tagline!</div>
         <div id="row3">
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
+            <div class="card">
+                <div class="text">
+                    <p>Card One</p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ut voluptates animi quibusdam
+                    delectus qui nesciunt corrupti obcaecati asperiores ab. Est qui eveniet doloribus vero! Voluptate,
+                    ex veniam. Consectetur, nemo!
+                </div>
+                <div class="more">
+                    <button>More Info</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="text">
+                    <p>Card Two</p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ut voluptates animi quibusdam
+                    delectus qui nesciunt corrupti obcaecati asperiores ab. Est qui eveniet doloribus vero! Voluptate,
+                    ex veniam. Consectetur, nemo!
+                </div>
+                <div class="more">
+                    <button>More Info</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="text">
+                    <p>Card Three</p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ut voluptates animi quibusdam
+                    delectus qui nesciunt corrupti obcaecati asperiores ab. Est qui eveniet doloribus vero! Voluptate,
+                    ex veniam. Consectetur, nemo!
+                </div>
+                <div class="more">
+                    <button>More Info</button>
+                </div>
+            </div>
         </div>
     </div>
     <div id="footer">Copyright © Your Website 2023</div>
